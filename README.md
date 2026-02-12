@@ -22,6 +22,7 @@ This project implements structured APIs with modular routes, models, middleware,
 ## Project Structure
 
 Capstone_Project_1
+
 ├── APIs/
 ├── middleware/
 ├── models/
