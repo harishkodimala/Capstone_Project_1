@@ -1,0 +1,100 @@
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "firstName":"vikas",
+    "lastName":"kumar",
+    "email":"12345678",
+    "password":"12345678"
+}
+
+
+
+###register author
+POST http://localhost:4000/author-api/users
+Content-Type: application/json
+
+{  
+    "firstName":"hari",
+    "lastName":"hari",
+    "email":"123456",
+    "password":"123456"
+
+}
+
+###authenticate author
+POST http://localhost:4000/common-api/login
+Content-Type: application/json
+
+{
+    "email":"admin@gmail.com",
+    "password":"admin"
+}
+
+
+###create artcles
+POST http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+    "author":"698a9cc27bdf8206c9aa12f5",
+    "title":"Java language 1",
+    "category":"Programming",
+    "content":"Java is programming language"
+}
+
+###update articles
+PUT http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{    
+    "articleId":"698a9cf77bdf8206c9aa12f9",
+    "author":"698a9cc27bdf8206c9aa12f5",
+    "title":"Java programing",
+    "category":"Programming",
+    "content":"Java is programming language"
+
+}
+
+
+###get article by id
+GET http://localhost:4000/author-api/articles/698a9cc27bdf8206c9aa12f5
+
+###logout
+GET http://localhost:4000/common-api/logout
+
+###get articles
+GET http://localhost:4000/user-api/articles
+
+
+###isArticleActive to false
+PUT http://localhost:4000/author-api/articles
+
+###adding comments
+POST http://localhost:4000/user-api/articles/698a9cf77bdf8206c9aa12f9
+Content-Type: application/json
+
+{
+    "comment":"excellent"
+}
+
+
+
+
+###test request
+GET http://localhost:4000/test
+
+
+###blocking and unblocking of user by admin
+PUT http://localhost:4000/admin-api/block/698a9cc27bdf8206c9aa12f5
+
+###changing the password
+PUT http://localhost:4000/common-api/change-password
+Content-Type: application/json
+
+{
+    "userID":"698a9cc27bdf8206c9aa12f5",
+    "email":"123456",
+    "currentPassword":"123456",
+    "newPassword":"1234567"
+}
